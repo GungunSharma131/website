@@ -1,0 +1,75 @@
+.img-sec{
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.main-section{
+  height: 250px;
+  width: 200px;
+  background-color: aqua;
+  margin: auto;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.main-head{
+  font-size:19px;
+  text-decoration: underline;
+}
+.lab-sec{
+  margin-right: 45%;
+  font-size: 14px;
+  font-weight: 600;
+}
+.main-sec{
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+
+
+}
+/* App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.App.dark {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.App.light button {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.App.dark button {
+  background-color: #ffffff;
+  color: #000000;
+}
