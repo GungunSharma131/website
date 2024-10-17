@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 
-function Mainapp(){
+function WordCounter(){
     const [Text, setText] = useState ('');
    
     const handleUpclick=()=>{
@@ -35,24 +35,18 @@ function Mainapp(){
         setText(newText.join(" "));
 
         }
-        const toggleTheme  =()=>{
-            console.log('Theme');
-            setText((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-
-        }
-    
+        
 
     return( 
      
       
-        <div className="container " >
-         
+        <div className="container word-count " > 
         <div className="row">
-            <div className="col-6">
+            <div className="col-12">
                 <h1 className="head">Word Counting</h1>
                 <div className="form-floating mt-5">
                 <textarea  value = {Text} className="form-control w-50 text-para" placeholder="Leave a comment here" id="floatingTextarea2"  onChange={btnonchange}></textarea>
-                <label className="text-para1">Comments</label>
+                <label className="text-para1">Write Here....</label>
                 <p className="para">{Text.split(" ").length} Words and {Text.length} Characters</p>
                 <p className="para">{0.05* Text.split(" ").length} sec time to read</p>
                
@@ -60,34 +54,32 @@ function Mainapp(){
         </div>
         </div>
       
-            <div className="row ">
+            <div className="row  word-count">
                 
-                <div className="col-sm-3">
-                    <button type="button" className="btn btn-danger  mt-5 btn1 w-100" onClick={handleUpclick}> UpperCase</button>
+                <div className="col">
+                    <button type="button" className="btn btn-danger box-btn  mt-5 btn1" onClick={handleUpclick}> UpperCase</button>
                 </div>
 
-                <div className="col-sm-3">
-                    <button type="button" className="btn btn-danger mt-5  btn1 w-100"  onClick={handleDownclick}>LowerCase</button>
+                <div className="col">
+                    <button type="button" className="btn btn-danger box-btn mt-5  btn1 "  onClick={handleDownclick}>LowerCase</button>
                     
                 </div>
-               <div className="col-sm-3">
+               <div className="col">
                    
-                   <button type="button" className="btn btn-danger mt-5  btn1 w-100"  onClick={handleCopy}>Copy Text</button>
+                   <button type="button" className="btn btn-danger box-btn mt-5  btn1 "  onClick={handleCopy}>Copy Text</button>
                </div>
-                <div className="col-sm-3">
+                
+             <div className="col">
     
-                    <button type="button" className="btn btn-danger mt-5  btn1 w-100"  onClick={handleExtraSpace}>Remove Space</button>
-    
-            </div>
-             <div className="col-sm-3">
-    
-                    <button type="button" className="btn btn-danger mt-5  btn1 w-100"  onClick={erase}>Clear</button>
+                    <button type="button" className="btn btn-danger box-btn mt-5  btn1"  onClick={erase}>Clear</button>
     
             </div>
-            <div className="col-sm-3">
-            <button type="button" className="btn btn-danger mt-5  btn1 w-100"  onClick={toggleTheme }>Dark Mode</button>
+            <div className="col">
+    
+                    <button type="button" className="btn btn-danger box-btn mt-5  btn1 w-100 p-2"  onClick={handleExtraSpace}>Remove Space</button>
+    
+            </div>
            
-            </div>
             </div>
            
         </div>
@@ -96,4 +88,4 @@ function Mainapp(){
     )
 }
 
-export default Mainapp;
+export default WordCounter;
